@@ -267,14 +267,6 @@ const forecastExample =
 // Make functions to save the search to local storage and then function to make an api call for each,
 // coordinates and Weather pull
 searchHistory();
-var hList = document.getElementsByClassName("hist");
-
-for(var a in hList){
-    if (document.getElementById(a)!== null){
-        document.getElementById(a).addEventListener("click", histSearch(document.getElementById(a).textContent));
-    }
-}
-
 
 document.getElementById("btn").addEventListener("click", findWeather);
 
@@ -291,7 +283,7 @@ async function findLoc(city_name){
 }
 
 async function findWeather(){
-    console.log("start")
+    
     var city_name = document.getElementById("cityInput").value;
 
     saveSearch(city_name);
